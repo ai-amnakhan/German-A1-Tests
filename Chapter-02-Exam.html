@@ -41,8 +41,7 @@ html{-webkit-text-size-adjust:100%}
 body{margin:0;background:radial-gradient(1100px 480px at 78% -8%,var(--r1),transparent 60%),radial-gradient(900px 500px at -5% 0%,var(--r2),transparent 55%),var(--bg);color:var(--ink);font-family:'Inter',system-ui,-apple-system,sans-serif;line-height:1.55;padding:0 16px 90px;-webkit-font-smoothing:antialiased}
 .wrap{max-width:760px;margin:0 auto}
 ::selection{background:rgba(216,168,74,.28)}
-.theme-btn{position:fixed;top:14px;right:16px;z-index:100;border:1px solid var(--line);background:var(--tbg);color:var(--tc);border-radius:8px;padding:5px 11px;font-size:16px;cursor:pointer;transition:background .15s,border-color .15s,color .15s;line-height:1.4;font-family:inherit}
-.theme-btn:hover{border-color:var(--gold-dim);background:var(--card-2)}
+.nav{position:sticky;top:0;z-index:100;background:var(--bg-2);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 16px;height:48px}.nav-back{color:var(--muted);text-decoration:none;font-family:ui-monospace,Menlo,monospace;font-size:12.5px;display:flex;align-items:center;gap:5px;transition:color .15s}.nav-back:hover{color:var(--gold)}.nav-theme{border:1px solid var(--line);background:var(--tbg);color:var(--tc);border-radius:8px;padding:4px 10px;font-size:15px;cursor:pointer;transition:background .15s,border-color .15s,color .15s;line-height:1.4;font-family:inherit}.nav-theme:hover{border-color:var(--gold-dim);background:var(--card-2)}
 header.top{padding:28px 0 24px;border-bottom:1px solid var(--line);margin-bottom:8px}
 .eyebrow{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;letter-spacing:.26em;text-transform:uppercase;font-size:11.5px;color:var(--gold);margin:0 0 14px}
 h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(26px,5vw,40px);line-height:1.1;margin:0 0 10px;font-weight:700;letter-spacing:-.01em}
