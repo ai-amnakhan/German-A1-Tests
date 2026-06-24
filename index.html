@@ -1,0 +1,175 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>German A1 — Chapter Exams</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0e1014;--bg-2:#13161c;--card:#181c24;--card-2:#1e232d;--card-end:#16191f;
+  --line:#2a2f3a;--line-soft:#222732;
+  --ink:#eef1f6;--ink-strong:#fff;--muted:#98a0b0;--faint:#6b7280;
+  --gold:#d8a84a;--gold-dim:#9a7a36;
+  --green:#5fd08a;
+  --shadow:0 1px 0 rgba(255,255,255,.03),0 10px 30px -12px rgba(0,0,0,.65);
+  --r1:rgba(216,168,74,.08);--r2:rgba(95,208,138,.05);
+  --tbg:#2a2f3a;--tc:#d8a84a;
+}
+html.light{
+  --bg:#f5f3ee;--bg-2:#eeebe4;--card:#fff;--card-2:#f8f5f0;--card-end:#f0ece5;
+  --line:#d8d3c8;--line-soft:#e2ddd4;
+  --ink:#1c1b1a;--ink-strong:#000;--muted:#5a606e;--faint:#8a909e;
+  --gold:#a06018;--gold-dim:#c08a30;
+  --green:#1a6e40;
+  --shadow:0 1px 0 rgba(0,0,0,.04),0 10px 30px -12px rgba(0,0,0,.12);
+  --r1:rgba(160,96,24,.07);--r2:rgba(26,110,64,.04);
+  --tbg:#e2ddd4;--tc:#a06018;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:radial-gradient(1100px 480px at 80% -8%,var(--r1),transparent 60%),
+    radial-gradient(900px 500px at -5% 0%,var(--r2),transparent 55%),var(--bg);
+  color:var(--ink);
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
+  padding:0 16px 80px;line-height:1.5;-webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:880px;margin:0 auto}
+::selection{background:rgba(216,168,74,.28)}
+
+.nav{position:sticky;top:0;z-index:100;background:var(--bg-2);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 16px;height:48px}.nav-brand{color:var(--gold);font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase}.nav-theme{border:1px solid var(--line);background:var(--tbg);color:var(--tc);border-radius:8px;padding:4px 10px;font-size:15px;cursor:pointer;transition:background .15s,border-color .15s,color .15s;line-height:1.4;font-family:inherit}.nav-theme:hover{border-color:var(--gold-dim);background:var(--card-2)}
+
+header{padding:32px 0 26px;border-bottom:1px solid var(--line);margin-bottom:30px}
+.eyebrow{font-family:ui-monospace,Menlo,monospace;letter-spacing:.26em;text-transform:uppercase;font-size:11.5px;color:var(--gold);margin:0 0 14px}
+h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(30px,6vw,48px);margin:0 0 10px;line-height:1.06;letter-spacing:-.015em}
+.sub{color:var(--muted);margin:8px 0 0;max-width:64ch;font-size:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:14px}
+.card{
+  display:flex;flex-direction:column;gap:6px;text-decoration:none;color:inherit;
+  background:linear-gradient(180deg,var(--card),var(--card-end));
+  border:1px solid var(--line-soft);border-radius:14px;padding:20px 20px 18px;
+  box-shadow:var(--shadow);position:relative;overflow:hidden;
+  transition:border-color .15s,transform .15s;
+}
+.card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--line);transition:background .2s}
+.card:hover{border-color:var(--gold-dim);transform:translateY(-3px)}
+.card:hover::before{background:var(--gold)}
+.cnum{font-family:ui-monospace,Menlo,monospace;font-size:11.5px;color:var(--gold);letter-spacing:.06em}
+.ctitle{font-size:17px;font-weight:600;line-height:1.28;color:var(--ink-strong)}
+.cmeta{font-family:ui-monospace,Menlo,monospace;font-size:11px;color:var(--faint);margin-top:2px}
+.go{margin-top:10px;font-family:ui-monospace,Menlo,monospace;font-size:12px;color:var(--muted);transition:color .15s}
+.card:hover .go{color:var(--gold)}
+footer{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);color:var(--faint);font-size:13px}
+</style>
+</head>
+<body>
+<nav class="nav"><span class="nav-brand">German A1</span><button class="nav-theme" id="theme-btn" aria-label="Toggle theme">&#9728;</button></nav>
+<div class="wrap">
+<header>
+  <p class="eyebrow">German A1 Course · Self-Assessment</p>
+  <h1>Chapter Exams</h1>
+  <p class="sub">One exam per chapter, built from your A1 course notes. Each test mixes multiple-choice, true/false, fill-in-the-blank and matching questions, tells you instantly whether each answer is right, and gives a final score. Aim for <b style="color:var(--ink)">80%+</b> before moving to the next chapter.</p>
+</header>
+<div class="grid">
+  <a class="card" href="Chapter-01-Exam.html">
+    <span class="cnum">Chapter 01</span>
+    <span class="ctitle">Basics — Alphabet, Pronunciation, Greetings &amp; Introductions</span>
+    <span class="cmeta">67 questions · pass 80%</span>
+    <span class="go">Start test →</span>
+  </a>
+  <a class="card" href="Chapter-02-Exam.html">
+    <span class="cnum">Chapter 02</span>
+    <span class="ctitle">Articles &amp; Identifying der/die/das</span>
+    <span class="cmeta">62 questions · pass 80%</span>
+    <span class="go">Start test →</span>
+  </a>
+  <a class="card" href="Chapter-03-Exam.html">
+    <span class="cnum">Chapter 03</span>
+    <span class="ctitle">Personal Pronouns, Plurals, Numbers, Months &amp; Dates</span>
+    <span class="cmeta">62 questions · pass 80%</span>
+    <span class="go">Start test →</span>
+  </a>
+  <a class="card" href="Chapter-04-Exam.html">
+    <span class="cnum">Chapter 04</span>
+    <span class="ctitle">Sentence Structure, haben/sein, Verbs (Präsens) &amp; Negation</span>
+    <span class="cmeta">61 questions · pass 80%</span>
+    <span class="go">Start test →</span>
+  </a>
+  <a class="card" href="Chapter-05-Exam.html">
+    <span class="cnum">Chapter 05</span>
+    <span class="ctitle">Asking Questions, Time Prepositions, Weather &amp; Seasons</span>
+    <span class="cmeta">61 questions · pass 80%</span>
+    <span class="go">Start test →</span>
+  </a>
+  <a class="card" href="Chapter-06-Exam.html">
+    <span class="cnum">Chapter 06</span>
+    <span class="ctitle">Adjectives, Adjective Endings &amp; Colors</span>
+    <span class="cmeta">60 questions · pass 80%</span>
+    <span class="go">Start test →</span>
+  </a>
+  <a class="card" href="Chapter-07-Exam.html">
+    <span class="cnum">Chapter 07</span>
+    <span class="ctitle">Modal Verbs (Präsens)</span>
+    <span class="cmeta">60 questions · pass 80%</span>
+    <span class="go">Start test →</span>
+  </a>
+  <a class="card" href="Chapter-08-Exam.html">
+    <span class="cnum">Chapter 08</span>
+    <span class="ctitle">Past Tense (Präteritum): haben, sein &amp; Regular Verbs</span>
+    <span class="cmeta">60 questions · pass 80%</span>
+    <span class="go">Start test →</span>
+  </a>
+  <a class="card" href="Chapter-09-Exam.html">
+    <span class="cnum">Chapter 09</span>
+    <span class="ctitle">Perfekt &amp; Partizip 2</span>
+    <span class="cmeta">60 questions · pass 80%</span>
+    <span class="go">Start test →</span>
+  </a>
+  <a class="card" href="Chapter-10-Exam.html">
+    <span class="cnum">Chapter 10</span>
+    <span class="ctitle">The Akkusativ Case &amp; Akkusativ Pronouns</span>
+    <span class="cmeta">60 questions · pass 80%</span>
+    <span class="go">Start test →</span>
+  </a>
+  <a class="card" href="Chapter-11-Exam.html">
+    <span class="cnum">Chapter 11</span>
+    <span class="ctitle">Possessive Articles &amp; Pronouns (Nominativ &amp; Akkusativ)</span>
+    <span class="cmeta">60 questions · pass 80%</span>
+    <span class="go">Start test →</span>
+  </a>
+  <a class="card" href="Chapter-12-Exam.html">
+    <span class="cnum">Chapter 12</span>
+    <span class="ctitle">Introduction to the Dativ Case</span>
+    <span class="cmeta">60 questions · pass 80%</span>
+    <span class="go">Start test →</span>
+  </a>
+  <a class="card" href="Chapter-13-Exam.html">
+    <span class="cnum">Chapter 13</span>
+    <span class="ctitle">Comparison (Komparativ/Superlativ) &amp; Demonstrative Pronouns</span>
+    <span class="cmeta">60 questions · pass 80%</span>
+    <span class="go">Start test →</span>
+  </a>
+  <a class="card" href="Chapter-14-Exam.html">
+    <span class="cnum">Chapter 14</span>
+    <span class="ctitle">The Imperativ (Commands &amp; Requests)</span>
+    <span class="cmeta">60 questions · pass 80%</span>
+    <span class="go">Start test →</span>
+  </a>
+</div>
+<footer>14 chapters · open any test in your browser. Answers are checked locally — nothing is saved or sent anywhere.</footer>
+</div>
+<script>
+(function(){
+  var h=document.documentElement,btn=document.getElementById('theme-btn');
+  if(sessionStorage.getItem('theme')==='light'){h.classList.add('light');btn.textContent='☾';}
+  btn.addEventListener('click',function(){
+    var toLit=!h.classList.contains('light');
+    h.classList.toggle('light',toLit);
+    btn.textContent=toLit?'☾':'☀';
+    sessionStorage.setItem('theme',toLit?'light':'dark');
+  });
+})();
+</script>
+</body></html>

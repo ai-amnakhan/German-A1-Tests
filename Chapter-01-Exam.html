@@ -1,0 +1,302 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 1 Exam — German A1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0e1014;--bg-2:#13161c;--card:#181c24;--card-2:#1e232d;--card-end:#16191f;--result-end:#15181e;
+  --line:#2a2f3a;--line-soft:#222732;
+  --ink:#eef1f6;--ink-strong:#fff;--muted:#98a0b0;--faint:#6b7280;
+  --gold:#d8a84a;--gold-dim:#9a7a36;
+  --green:#5fd08a;--green-bg:#15291f;--green-line:#28503a;
+  --red:#f0807a;--red-bg:#2a191a;--red-line:#5a2f30;
+  --sel:#2a3a55;--sel-line:#3f5f8f;
+  --shadow:0 1px 0 rgba(255,255,255,.03),0 10px 30px -12px rgba(0,0,0,.65);
+  --sbg1:rgba(14,16,20,.96);--sbg2:rgba(14,16,20,.82);
+  --opt-hov:#222732;--correct-txt:#d6f5e2;--wrong-txt:#fad7d4;
+  --r1:rgba(216,168,74,.07);--r2:rgba(95,208,138,.05);
+  --tbg:#2a2f3a;--tc:#d8a84a;--vi-c:#fff;--vi-bg:rgba(255,255,255,.08);
+}
+html.light{
+  --bg:#f5f3ee;--bg-2:#eeebe4;--card:#fff;--card-2:#f8f5f0;--card-end:#f2efe9;--result-end:#f0ece5;
+  --line:#d8d3c8;--line-soft:#e2ddd4;
+  --ink:#1c1b1a;--ink-strong:#000;--muted:#5a606e;--faint:#8a909e;
+  --gold:#a06018;--gold-dim:#c08a30;
+  --green:#1a6e40;--green-bg:#eaf5ee;--green-line:#50a870;
+  --red:#b82e2a;--red-bg:#fceaea;--red-line:#d87070;
+  --sel:#e8eefa;--sel-line:#7898d0;
+  --shadow:0 1px 0 rgba(0,0,0,.04),0 10px 30px -12px rgba(0,0,0,.12);
+  --sbg1:rgba(245,243,238,.97);--sbg2:rgba(245,243,238,.85);
+  --opt-hov:#f0ece5;--correct-txt:#0d3d1f;--wrong-txt:#5a1010;
+  --r1:rgba(160,96,24,.06);--r2:rgba(26,110,64,.04);
+  --tbg:#e2ddd4;--tc:#a06018;--vi-c:#1c1b1a;--vi-bg:rgba(0,0,0,.06);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:radial-gradient(1100px 480px at 78% -8%,var(--r1),transparent 60%),
+    radial-gradient(900px 500px at -5% 0%,var(--r2),transparent 55%),var(--bg);
+  color:var(--ink);font-family:'Inter',system-ui,-apple-system,sans-serif;
+  line-height:1.55;padding:0 16px 90px;-webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:760px;margin:0 auto}
+::selection{background:rgba(216,168,74,.28)}
+.nav{position:sticky;top:0;z-index:100;background:var(--bg-2);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 16px;height:48px}.nav-back{color:var(--muted);text-decoration:none;font-family:ui-monospace,Menlo,monospace;font-size:12.5px;display:flex;align-items:center;gap:5px;transition:color .15s}.nav-back:hover{color:var(--gold)}.nav-theme{border:1px solid var(--line);background:var(--tbg);color:var(--tc);border-radius:8px;padding:4px 10px;font-size:15px;cursor:pointer;transition:background .15s,border-color .15s,color .15s;line-height:1.4;font-family:inherit}.nav-theme:hover{border-color:var(--gold-dim);background:var(--card-2)}
+header.top{padding:28px 0 24px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.eyebrow{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;letter-spacing:.26em;text-transform:uppercase;font-size:11.5px;color:var(--gold);margin:0 0 14px}
+h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(26px,5vw,40px);line-height:1.1;margin:0 0 10px;font-weight:700;letter-spacing:-.01em}
+.sub{color:var(--muted);margin:8px 0 0;font-size:15.5px;max-width:60ch}
+.meta{margin-top:20px;font-family:ui-monospace,Menlo,monospace;font-size:12px;color:var(--faint);display:flex;gap:10px 20px;flex-wrap:wrap;align-items:center}
+.meta b{color:var(--ink);font-weight:600}
+.meta .dot{width:3px;height:3px;border-radius:50%;background:var(--line);display:inline-block}
+.scorebar{position:sticky;top:48px;z-index:20;background:linear-gradient(180deg,var(--sbg1),var(--sbg2));backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line);margin:18px -16px 28px;padding:12px 16px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.scorebar .label{font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+.track{flex:1 1 160px;height:7px;background:var(--card-2);border:1px solid var(--line-soft);border-radius:99px;overflow:hidden;min-width:120px}
+.fill-bar{height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--green));border-radius:99px;transition:width .35s cubic-bezier(.4,0,.2,1)}
+.scoreval{font-family:ui-monospace,Menlo,monospace;font-size:12.5px;font-weight:600;color:var(--ink)}
+.q{background:linear-gradient(180deg,var(--card),var(--card) 60%,var(--card-end));border:1px solid var(--line-soft);border-radius:14px;padding:22px 22px 20px;margin:0 0 16px;scroll-margin-top:112px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.q::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--line);transition:background .2s}
+.q.answered::before{background:var(--gold)}
+.q.correct::before{background:var(--green)}
+.q.wrong::before{background:var(--red)}
+.qhead{display:flex;gap:12px;align-items:center;margin-bottom:14px}
+.qnum{font-family:ui-monospace,Menlo,monospace;font-size:11.5px;color:var(--gold);border:1px solid var(--gold-dim);border-radius:7px;padding:3px 9px;white-space:nowrap;background:rgba(216,168,74,.07)}
+.qtype{font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-left:auto;white-space:nowrap}
+.qtext{font-size:18px;margin:0 0 16px;color:var(--ink)}
+.qtext i{color:var(--gold);font-style:italic}
+.qtext b{color:var(--ink-strong)}
+.opts{display:flex;flex-direction:column;gap:10px}
+.opt{display:flex;gap:11px;align-items:flex-start;cursor:pointer;border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:var(--card-2);transition:border-color .14s,background .14s,transform .05s;font-size:16px;color:var(--ink)}
+.opt:hover{border-color:var(--gold-dim);background:var(--opt-hov)}
+.opt:active{transform:scale(.997)}
+.opt input{margin-top:3px;accent-color:var(--gold);width:16px;height:16px}
+.opt.sel{border-color:var(--sel-line);background:var(--sel)}
+.opt.ans-correct{border-color:var(--green-line);background:var(--green-bg);color:var(--correct-txt)}
+.opt.ans-wrong{border-color:var(--red-line);background:var(--red-bg);color:var(--wrong-txt)}
+.opt.locked{cursor:default}
+.opt.locked:hover{background:var(--card-2)}
+.opt.ans-correct.locked:hover{background:var(--green-bg)}
+.opt.ans-wrong.locked:hover{background:var(--red-bg)}
+.fill input[type=text]{width:100%;font:inherit;font-size:16px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--card-2);color:var(--ink);transition:border-color .14s,box-shadow .14s}
+.fill input::placeholder{color:var(--faint)}
+.fill input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(216,168,74,.16)}
+.match-row{display:flex;gap:12px;align-items:center;margin-bottom:10px;flex-wrap:wrap}
+.match-left{flex:1 1 180px;min-width:140px;padding:11px 13px;background:rgba(216,168,74,.06);border:1px solid var(--gold-dim);border-radius:10px;font-size:15.5px;color:var(--ink)}
+.match-row select{flex:1 1 180px;min-width:140px;font:inherit;font-size:15px;padding:11px 13px;border:1px solid var(--line);border-radius:10px;background:var(--card-2);color:var(--ink);appearance:none;-webkit-appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--muted) 50%),linear-gradient(135deg,var(--muted) 50%,transparent 50%);background-position:calc(100% - 18px) calc(50% - 2px),calc(100% - 13px) calc(50% - 2px);background-size:5px 5px,5px 5px;background-repeat:no-repeat;padding-right:34px}
+.match-row select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(216,168,74,.16)}
+.match-row select.ok{border-color:var(--green-line);background-color:var(--green-bg);color:var(--correct-txt)}
+.match-row select.no{border-color:var(--red-line);background-color:var(--red-bg);color:var(--wrong-txt)}
+.checkbtn{margin-top:16px;font:inherit;font-size:14.5px;font-weight:600;cursor:pointer;background:var(--gold);color:#1a1407;border:1px solid var(--gold);border-radius:9px;padding:10px 20px;transition:filter .14s,background .14s}
+.checkbtn:hover{filter:brightness(1.08)}
+.checkbtn:disabled{background:var(--card-2);color:var(--faint);border-color:var(--line);cursor:default;filter:none}
+.feedback{margin-top:14px;padding:13px 15px;border-radius:10px;font-size:15px;display:none}
+.feedback.show{display:block;animation:rise .22s ease}
+@keyframes rise{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+.feedback.good{background:var(--green-bg);border:1px solid var(--green-line)}
+.feedback.bad{background:var(--red-bg);border:1px solid var(--red-line)}
+.verdict{font-weight:700;display:block;margin-bottom:5px}
+.feedback.good .verdict{color:var(--green)}
+.feedback.bad .verdict{color:var(--red)}
+.verdict i{font-style:normal;color:var(--vi-c);background:var(--vi-bg);padding:1px 7px;border-radius:5px}
+.explain{color:var(--muted)}
+.explain b{color:var(--gold)}
+.result{margin-top:32px;padding:30px 28px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,var(--card),var(--result-end));display:none;box-shadow:var(--shadow)}
+.result.show{display:block;animation:rise .3s ease}
+.result h2{margin:0 0 4px;font-size:24px;font-family:'Playfair Display',Georgia,serif}
+.result .big{font-size:52px;font-weight:700;font-family:ui-monospace,Menlo,monospace;margin:8px 0;letter-spacing:-.02em}
+.result .msg{font-size:16px;color:var(--muted)}
+.result .verdict-line{font-weight:700;font-size:18px;margin-top:12px}
+.pass{color:var(--green)} .review{color:var(--red)}
+.actions{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap}
+.actions button{font:inherit;font-size:14.5px;font-weight:600;cursor:pointer;border-radius:9px;padding:10px 18px;transition:filter .14s,background .14s}
+.btn-primary{background:var(--gold);color:#1a1407;border:1px solid var(--gold)}
+.btn-primary:hover{filter:brightness(1.08)}
+.btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn-ghost:hover{background:var(--card-2);border-color:var(--gold-dim)}
+footer{margin-top:44px;padding-top:20px;border-top:1px solid var(--line);color:var(--faint);font-size:13px}
+a{color:var(--gold)}
+@media(max-width:480px){.q{padding:18px 16px 16px}.qtext{font-size:16.5px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<nav class="nav"><a class="nav-back" href="index.html">&#8592; All Chapters</a><button class="nav-theme" id="theme-btn" aria-label="Toggle theme">&#9728;</button></nav>
+<div class="wrap">
+  <header class="top">
+    <p class="eyebrow">German A1 · Self-Test</p>
+    <h1>Chapter 1 — Basics — Alphabet, Pronunciation, Greetings &amp; Introductions</h1>
+    <p class="sub">Covers the German alphabet &amp; umlauts, sounds and character combinations, greetings &amp; farewells, basic polite phrases, and introducing yourself.</p>
+    <div class="meta">
+      <span><b>67</b> questions</span><span class="dot"></span>
+      <span>Pass mark <b>80%</b></span><span class="dot"></span>
+      <span>Mixed formats</span>
+    </div>
+  </header>
+  <div class="scorebar">
+    <span class="label">Progress</span>
+    <div class="track"><div class="fill-bar" id="bar"></div></div>
+    <span class="scoreval" id="scoreval">0 / 67 · 0 correct</span>
+  </div>
+  <main id="quiz"></main>
+  <div class="result" id="result">
+    <h2>Your result</h2>
+    <div class="big" id="finalpct">—</div>
+    <div class="msg" id="finalmsg"></div>
+    <div class="verdict-line" id="finalverdict"></div>
+    <div class="actions">
+      <button class="btn-primary" onclick="location.reload()">Retake this exam</button>
+      <button class="btn-ghost" onclick="window.scrollTo({top:0,behavior:'smooth'})">Back to top</button>
+    </div>
+  </div>
+  <footer>Chapter 1 of 14 · German A1 Course self-assessment. Aim for 80%+ before moving to the next chapter.</footer>
+</div>
+<script>
+const QUESTIONS = [{"type": "mc", "q": "How is the German letter <b>J</b> (j) pronounced when naming it?", "options": ["yot", "jay", "zhe", "gee"], "answer": 0, "explain": "J is named “yot”, e.g. <i>Joghurt</i>."}, {"type": "mc", "q": "The letter <b>V</b> in <i>Vater</i> is pronounced like which English sound?", "options": ["V as in 'van'", "F as in 'father'", "W as in 'wet'", "B as in 'bat'"], "answer": 1, "explain": "V is usually pronounced as English F: Vater → 'Fater', Vogel → 'Fogel'."}, {"type": "mc", "q": "How is <b>W</b> (as in <i>Welt</i>) pronounced?", "options": ["like English W", "like English V", "like English F", "silent"], "answer": 1, "explain": "German W sounds like English V."}, {"type": "fill", "q": "Write the German letter (single character) for the 'ess-tsett' / sharp-s sound, as in <i>Fuß</i>.", "answer": ["ß"], "explain": "ß (Eszett) is pronounced like SS, e.g. Fuß, Straße."}, {"type": "mc", "q": "The combination <b>ei</b> (as in <i>drei</i>, <i>Bein</i>) is pronounced like…", "options": ["English 'ee'", "English 'I'/'eye'", "English 'ay'", "English 'oy'"], "answer": 1, "explain": "ei = English 'I' (drei, Bein). Tip: the sound matches the SECOND letter — ei→'I', ie→'ee'."}, {"type": "mc", "q": "The combination <b>ie</b> (as in <i>Brief</i>, <i>viel</i>) is pronounced like…", "options": ["English 'ee'", "English 'I'/'eye'", "English 'ay'", "English 'oy'"], "answer": 0, "explain": "ie = 'ee' (Brief='Breef'). Sound matches the second letter."}, {"type": "mc", "q": "<b>eu</b> (as in <i>neu</i>, <i>heute</i>, <i>Europa</i>) is pronounced…", "options": ["'ee'", "'oo'", "'oye'", "'ay'"], "answer": 2, "explain": "eu = 'oye' (neu='noye')."}, {"type": "mc", "q": "At the <b>start</b> of a word, <b>st-</b> (as in <i>Straße</i>, <i>Start</i>) is pronounced…", "options": ["'st' as in English", "'sht'", "'tt'", "silent t"], "answer": 1, "explain": "At the start, st- and sp- are pronounced 'sht'/'shp' (Straße='Shtraße', Sport='Shport')."}, {"type": "mc", "q": "After <b>a, o, u, au</b>, the combination <b>ch</b> (as in <i>machen</i>, <i>rauchen</i>) is pronounced…", "options": ["'sh'", "'kh' (like a throaty K)", "'tch'", "'k'"], "answer": 1, "explain": "After a/o/u/au, ch='kh' (machen='makhen'); in other cases it's 'sh' (ich='ish')."}, {"type": "mc", "q": "<b>pf</b> (as in <i>Pferd</i>, <i>Pflege</i>) is pronounced like…", "options": ["'p'", "'f'", "'pf' (p+f together)", "'ph'"], "answer": 2, "explain": "Both letters are pronounced together; close to F but the P is sounded: Pferd."}, {"type": "fill", "q": "Translate to German: <b>Good morning</b> (greeting).", "answer": ["Guten Morgen", "guten morgen"], "explain": "Guten Morgen = Good morning."}, {"type": "fill", "q": "Translate to German: <b>Good night</b>.", "answer": ["Gute Nacht", "gute nacht"], "explain": "Gute Nacht (note: 'Gute', not 'Guten', because Nacht is feminine)."}, {"type": "mc", "q": "Which greeting means <b>Good evening</b>?", "options": ["Guten Tag", "Guten Morgen", "Guten Abend", "Gute Nacht"], "answer": 2, "explain": "Guten Abend = Good evening."}, {"type": "mc", "q": "Which is the <b>formal</b> way to ask 'How are you?'", "options": ["Wie geht's?", "Wie geht es dir?", "Wie geht es Ihnen?", "Was ist das?"], "answer": 2, "explain": "Wie geht es Ihnen? is formal (Sie). 'Wie geht es dir?' / 'Wie geht's?' are informal."}, {"type": "mc", "q": "<i>Auf Wiederhören</i> is used specifically…", "options": ["when meeting someone", "on the telephone", "at night", "when saying thanks"], "answer": 1, "explain": "Auf Wiederhören ('hear you again') is the telephone farewell; in person it's Auf Wiedersehen."}, {"type": "fill", "q": "Translate to German: <b>Thank you very much</b> (the 'schön' form).", "answer": ["Danke schön", "danke schön", "Dankeschön", "dankeschön"], "explain": "Danke schön. Also: Vielen Dank ('thanks a lot'), Danke ('thanks')."}, {"type": "mc", "q": "Which phrase means <b>Excuse me</b>?", "options": ["Entschuldigung", "Kein Problem", "Es tut mir leid", "Bitte sehr"], "answer": 0, "explain": "Entschuldigung = excuse me. Es tut mir leid = I'm sorry; Bitte sehr = you're welcome."}, {"type": "tf", "q": "True or False: <i>Bitte</i> can mean both 'please' and (as <i>Bitte sehr/schön</i>) 'you're welcome'.", "answer": true, "explain": "Correct. Bitte = please; Bitte sehr / Bitte schön = you're welcome."}, {"type": "mc", "q": "To say where you are FROM, you say…", "options": ["Ich wohne in …", "Ich komme aus …", "Ich heiße …", "Ich bin …"], "answer": 1, "explain": "Ich komme aus Pakistan = I'm from Pakistan. Ich wohne in … = I live in … (city)."}, {"type": "fill", "q": "Complete the introduction — 'My name is Anna': Mein Name ist Anna, or: Ich ____ Anna.", "answer": ["heiße", "heisse"], "explain": "Ich heiße Anna = My name is Anna."}, {"type": "match", "q": "Match each German introduction category to what it asks about.", "pairs": [["Name", "Your name"], ["Land", "Country you are from"], ["Wohnort", "City you live in"], ["Beruf", "Your profession"]], "explain": "Name=name, Land=country of origin, Wohnort=where you live, Beruf=profession."}, {"type": "mc", "q": "Which sentence correctly states a profession (for a male student)?", "options": ["Ich komme aus Student", "Ich wohne Student", "Ich bin Student", "Ich heiße Student"], "answer": 2, "explain": "Ich bin Student (male) / Studentin (female)."}, {"type": "mc", "q": "How is the German letter <b>Z</b> (z) named/pronounced?", "options": ["zed", "tset", "zee", "ess"], "answer": 1, "explain": "Z is pronounced 'tset' in German, e.g. <i>Zeit</i> = 'tsait'."}, {"type": "mc", "q": "How is the German letter <b>Y</b> named?", "options": ["why", "ups-elon (Ypsilon)", "yot", "igrek"], "answer": 1, "explain": "Y is called 'Ypsilon' (ups-elon)."}, {"type": "mc", "q": "How is the German letter <b>C</b> named?", "options": ["see", "tseh", "keh", "tsay"], "answer": 1, "explain": "C is named 'tseh'."}, {"type": "mc", "q": "How is the German letter <b>W</b> named (its alphabet name)?", "options": ["weh", "veh", "doppel-veh", "wuh"], "answer": 0, "explain": "W is named 'weh' but sounds like English V in words."}, {"type": "mc", "q": "How is the German letter <b>J</b> used in a word like <i>Joghurt</i>?", "options": ["like English J", "like English Y", "like English H", "silent"], "answer": 1, "explain": "J = English Y sound: Joghurt = 'Yoghurt', ja = 'ya'."}, {"type": "mc", "q": "How is the German letter <b>R</b> named?", "options": ["arr", "err", "ar", "ur"], "answer": 1, "explain": "R is named 'err'."}, {"type": "mc", "q": "How is the German letter <b>G</b> named?", "options": ["jee", "geh", "gay", "guh"], "answer": 1, "explain": "G is named 'geh'."}, {"type": "mc", "q": "How is the German letter <b>E</b> named?", "options": ["ee", "eh", "ay", "uh"], "answer": 1, "explain": "E is named 'eh'."}, {"type": "mc", "q": "How is the German letter <b>I</b> named?", "options": ["eye", "ee", "ih", "ay"], "answer": 1, "explain": "I is named 'ee'."}, {"type": "mc", "q": "How is the German letter <b>A</b> named?", "options": ["ay", "ah/aa", "uh", "eh"], "answer": 1, "explain": "A is named 'aa'."}, {"type": "fill", "q": "Write the umlaut vowel that is the 'A umlaut'.", "answer": ["ä", "Ä"], "explain": "ä is the A-umlaut, e.g. <i>Mädchen</i>."}, {"type": "fill", "q": "Write the umlaut vowel that is the 'O umlaut'.", "answer": ["ö", "Ö"], "explain": "ö is the O-umlaut, e.g. <i>schön</i>."}, {"type": "fill", "q": "Write the umlaut vowel that is the 'U umlaut'.", "answer": ["ü", "Ü"], "explain": "ü is the U-umlaut, e.g. <i>Bücher</i>."}, {"type": "mc", "q": "How many umlaut vowels does German have?", "options": ["2", "3", "4", "5"], "answer": 1, "explain": "Three: ä, ö, ü."}, {"type": "mc", "q": "At the start of a word, <b>sp-</b> (as in <i>Sport</i>) is pronounced…", "options": ["'sp'", "'shp'", "'sb'", "'shb'"], "answer": 1, "explain": "Word-initial sp- = 'shp': Sport = 'Shport'."}, {"type": "mc", "q": "After <b>i, e, ä, ö, ü</b>, the combination <b>ch</b> (as in <i>ich</i>, <i>echt</i>) is pronounced…", "options": ["'kh'", "'sh' (soft)", "'k'", "'tch'"], "answer": 1, "explain": "The 'soft' ch = 'sh': ich = 'ish', echt = 'esht'."}, {"type": "mc", "q": "The combination <b>au</b> (as in <i>Haus</i>, <i>Maus</i>) sounds like…", "options": ["'ow/ou' as in 'house'", "'oo'", "'ay'", "'oye'"], "answer": 0, "explain": "au = 'ow' as in English 'house': Haus = 'Hows'."}, {"type": "mc", "q": "The combination <b>äu</b> (as in <i>Träume</i>) sounds like…", "options": ["'ay'", "'oye'", "'ow'", "'ee'"], "answer": 1, "explain": "äu = 'oye', same sound as eu: Träume = 'Troyme'."}, {"type": "mc", "q": "The German <b>qu</b> (as in <i>Quark</i>, <i>Quiz</i>) is pronounced like…", "options": ["'kw'", "'kv'", "'kw' silent w", "'gw'"], "answer": 1, "explain": "qu = 'kv': Quark = 'Kvark', Quiz = 'Kvits'."}, {"type": "mc", "q": "The combination <b>sch</b> (as in <i>schön</i>, <i>Schule</i>) is pronounced like…", "options": ["'sk'", "'sh'", "'skh'", "'tch'"], "answer": 1, "explain": "sch = English 'sh': Schule = 'Shule'."}, {"type": "tf", "q": "True or False: German <b>V</b> in most native words is pronounced like English F.", "answer": true, "explain": "True: Vater = 'Fater', Vogel = 'Fogel'."}, {"type": "tf", "q": "True or False: In the pair <b>ei</b> vs <b>ie</b>, the sound matches the SECOND letter.", "answer": true, "explain": "True: ei = 'I' (drei), ie = 'ee' (Brief)."}, {"type": "mc", "q": "Which greeting means <b>Good day / Hello</b> (neutral, daytime)?", "options": ["Guten Morgen", "Guten Tag", "Guten Abend", "Gute Nacht"], "answer": 1, "explain": "Guten Tag = Good day / Hello."}, {"type": "fill", "q": "Translate to German: <b>Good evening</b>.", "answer": ["Guten Abend", "guten abend"], "explain": "Guten Abend = Good evening."}, {"type": "mc", "q": "Which is an informal way to say <b>Hello / Hi</b>?", "options": ["Guten Tag", "Hallo", "Auf Wiedersehen", "Entschuldigung"], "answer": 1, "explain": "Hallo = Hi/Hello (informal)."}, {"type": "mc", "q": "Which means <b>Goodbye</b> (in person, formal)?", "options": ["Auf Wiederhören", "Auf Wiedersehen", "Tschüss", "Ciao"], "answer": 1, "explain": "Auf Wiedersehen = goodbye in person; Auf Wiederhören is for the phone."}, {"type": "mc", "q": "Which is an informal <b>Bye</b>?", "options": ["Auf Wiedersehen", "Tschüss", "Guten Tag", "Bitte"], "answer": 1, "explain": "Tschüss (and Ciao) = informal bye."}, {"type": "fill", "q": "Translate to German: <b>Good morning</b>.", "answer": ["Guten Morgen", "guten morgen"], "explain": "Guten Morgen = Good morning."}, {"type": "mc", "q": "What does <i>Bitte</i> mean on its own?", "options": ["Thanks", "Please", "Sorry", "Hello"], "answer": 1, "explain": "Bitte = please (also 'you're welcome' as Bitte sehr/schön)."}, {"type": "mc", "q": "What does <i>Vielen Dank</i> mean?", "options": ["You're welcome", "Thanks a lot", "No problem", "Excuse me"], "answer": 1, "explain": "Vielen Dank = thanks a lot / many thanks."}, {"type": "mc", "q": "What does <i>Es tut mir leid</i> mean?", "options": ["You're welcome", "I'm sorry", "No problem", "Good night"], "answer": 1, "explain": "Es tut mir leid = I'm sorry."}, {"type": "mc", "q": "What does <i>Kein Problem</i> mean?", "options": ["Big problem", "No problem", "Please", "Thanks"], "answer": 1, "explain": "Kein Problem = no problem."}, {"type": "fill", "q": "Translate to German: <b>Excuse me</b> (one common single word).", "answer": ["Entschuldigung", "entschuldigung"], "explain": "Entschuldigung = excuse me / sorry."}, {"type": "mc", "q": "Which phrase means <b>You're welcome</b>?", "options": ["Bitte schön", "Danke schön", "Guten Tag", "Es tut mir leid"], "answer": 0, "explain": "Bitte schön / Bitte sehr = you're welcome."}, {"type": "mc", "q": "Which is the <b>informal</b> 'How are you?' (to one friend)?", "options": ["Wie geht es Ihnen?", "Wie geht es dir?", "Wie heißen Sie?", "Woher kommen Sie?"], "answer": 1, "explain": "Wie geht es dir? (or Wie geht's?) is informal."}, {"type": "mc", "q": "<i>Es geht mir gut</i> means…", "options": ["I'm not well", "I'm doing well", "I'm sorry", "See you later"], "answer": 1, "explain": "Es geht mir gut = I'm doing well."}, {"type": "mc", "q": "<i>Nicht gut</i> means…", "options": ["Very good", "Not good", "No problem", "Good night"], "answer": 1, "explain": "Nicht gut = not good."}, {"type": "fill", "q": "Complete: 'I come from Germany' — Ich komme ____ Deutschland.", "answer": ["aus"], "explain": "Ich komme aus Deutschland = I come from Germany."}, {"type": "fill", "q": "Complete: 'I live in Berlin' — Ich ____ in Berlin.", "answer": ["wohne"], "explain": "Ich wohne in Berlin = I live in Berlin."}, {"type": "mc", "q": "Which question means <b>Where are you from?</b> (informal)?", "options": ["Wo wohnst du?", "Woher kommst du?", "Wie heißt du?", "Was machst du?"], "answer": 1, "explain": "Woher kommst du? = Where are you from?"}, {"type": "mc", "q": "Which question means <b>Where do you live?</b> (informal)?", "options": ["Woher kommst du?", "Wo wohnst du?", "Wie geht es dir?", "Wer bist du?"], "answer": 1, "explain": "Wo wohnst du? = Where do you live?"}, {"type": "fill", "q": "Say 'My name is …' using the verb form: Ich ____ Anna.", "answer": ["heiße", "heisse"], "explain": "Ich heiße Anna = My name is Anna."}, {"type": "mc", "q": "For a female student, the correct profession sentence is…", "options": ["Ich bin Student", "Ich bin Studentin", "Ich heiße Studentin", "Ich komme Studentin"], "answer": 1, "explain": "Female form adds -in: Studentin."}, {"type": "match", "q": "Match each greeting/phrase to its English meaning.", "pairs": [["Guten Morgen", "Good morning"], ["Gute Nacht", "Good night"], ["Auf Wiedersehen", "Goodbye"], ["Danke", "Thanks"]], "explain": "Standard greetings and polite phrases."}, {"type": "match", "q": "Match each introduction question word to what it asks.", "pairs": [["Woher", "From where"], ["Wo", "Where"], ["Wie", "How"], ["Wer", "Who"]], "explain": "Woher=from where, Wo=where, Wie=how, Wer=who."}];
+const PASS = 0.8;
+const total = QUESTIONS.length;
+let checkedCount = 0, correctCount = 0;
+const done = new Array(total).fill(false);
+const quiz = document.getElementById('quiz');
+function norm(s){return (s||'').toString().trim().toLowerCase().replace(/[.!?,;:]+$/,'').replace(/\s+/g,' ');}
+QUESTIONS.forEach((q, i) => {
+  const el = document.createElement('section');
+  el.className = 'q'; el.id = 'q'+i;
+  const typeLabel = ({mc:'Multiple choice', tf:'True / False', fill:'Type your answer', match:'Matching'})[q.type] || '';
+  let inner = `<div class="qhead"><span class="qnum">Q${i+1}</span><span class="qtype">${typeLabel}</span></div>`;
+  inner += `<p class="qtext">${q.q}</p>`;
+  if(q.type==='mc' || q.type==='tf'){
+    const opts = q.type==='tf' ? ['True','False'] : q.options;
+    inner += `<div class="opts" data-q="${i}">`;
+    opts.forEach((o,oi)=>{ inner += `<label class="opt"><input type="radio" name="q${i}" value="${oi}"><span>${o}</span></label>`; });
+    inner += `</div>`;
+  } else if(q.type==='fill'){
+    inner += `<div class="fill"><input type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Type your answer…" data-q="${i}"></div>`;
+  } else if(q.type==='match'){
+    const rights = q.pairs.map(p=>p[1]);
+    const shuffled = rights.slice().sort(()=>Math.random()-0.5);
+    inner += `<div class="matchbox" data-q="${i}">`;
+    q.pairs.forEach((p,pi)=>{
+      let optsHtml = `<option value="">— choose —</option>`;
+      shuffled.forEach(r=>{ optsHtml += `<option value="${r.replace(/"/g,'&quot;')}">${r}</option>`; });
+      inner += `<div class="match-row"><span class="match-left">${p[0]}</span><select data-row="${pi}">${optsHtml}</select></div>`;
+    });
+    inner += `</div>`;
+  }
+  inner += `<button class="checkbtn" data-check="${i}">Check answer</button>`;
+  inner += `<div class="feedback" id="fb${i}"></div>`;
+  el.innerHTML = inner; quiz.appendChild(el);
+});
+quiz.addEventListener('change', e=>{
+  if(e.target.matches('.opt input')){
+    const box = e.target.closest('.opts');
+    if(box.classList.contains('locked')) return;
+    box.querySelectorAll('.opt').forEach(l=>l.classList.remove('sel'));
+    e.target.closest('.opt').classList.add('sel');
+  }
+});
+quiz.addEventListener('click', e=>{
+  const b = e.target.closest('[data-check]');
+  if(!b) return;
+  const i = +b.dataset.check;
+  if(done[i]) return;
+  const q = QUESTIONS[i];
+  let ok = false, needAnswer = false;
+  if(q.type==='mc' || q.type==='tf'){
+    const box = quiz.querySelector(`.opts[data-q="${i}"]`);
+    const chosen = box.querySelector('input:checked');
+    if(!chosen){ needAnswer = true; }
+    else {
+      const ci = +chosen.value;
+      const correct = q.type==='tf' ? (q.answer===true?0:1) : q.answer;
+      ok = (ci===correct);
+      box.classList.add('locked');
+      box.querySelectorAll('.opt').forEach((l,li)=>{
+        l.classList.add('locked'); l.querySelector('input').disabled = true;
+        if(li===correct) l.classList.add('ans-correct');
+        else if(li===ci) l.classList.add('ans-wrong');
+      });
+    }
+  } else if(q.type==='fill'){
+    const inp = quiz.querySelector(`.fill input[data-q="${i}"]`);
+    const val = inp.value;
+    if(!norm(val)){ needAnswer = true; }
+    else {
+      const accepted = Array.isArray(q.answer)? q.answer : [q.answer];
+      ok = accepted.some(a=>norm(a)===norm(val));
+      inp.disabled = true;
+      inp.style.borderColor = ok ? 'var(--green-line)' : 'var(--red-line)';
+      inp.style.background = ok ? 'var(--green-bg)' : 'var(--red-bg)';
+      inp.style.color = ok ? 'var(--correct-txt)' : 'var(--wrong-txt)';
+    }
+  } else if(q.type==='match'){
+    const box = quiz.querySelector(`.matchbox[data-q="${i}"]`);
+    const sels = [...box.querySelectorAll('select')];
+    if(sels.some(s=>!s.value)){ needAnswer = true; }
+    else {
+      ok = true;
+      sels.forEach(s=>{
+        const want = q.pairs[+s.dataset.row][1];
+        const good = (s.value===want);
+        if(!good) ok = false;
+        s.classList.add(good?'ok':'no'); s.disabled = true;
+      });
+    }
+  }
+  if(needAnswer){
+    const fb = document.getElementById('fb'+i);
+    fb.className = 'feedback bad show';
+    fb.innerHTML = `<span class="verdict">Please choose or type an answer first.</span>`;
+    return;
+  }
+  done[i] = true; checkedCount++; if(ok) correctCount++;
+  const sec = document.getElementById('q'+i);
+  sec.classList.add('answered', ok?'correct':'wrong');
+  b.disabled = true; b.textContent = ok ? 'Correct ✓' : 'Checked';
+  const fb = document.getElementById('fb'+i);
+  fb.className = 'feedback show ' + (ok?'good':'bad');
+  let head = ok ? 'Correct!' : 'Not quite.';
+  if(!ok){
+    if(q.type==='fill'){ head = 'Not quite. Correct answer: <i>'+(Array.isArray(q.answer)?q.answer[0]:q.answer)+'</i>'; }
+    else if(q.type==='tf'){ head = 'Not quite. Correct answer: <i>'+(q.answer?'True':'False')+'</i>'; }
+    else if(q.type==='match'){ head = 'Not quite — check the highlighted matches.'; }
+    else if(q.type==='mc'){ head = 'Not quite. Correct answer: <i>'+q.options[q.answer]+'</i>'; }
+  }
+  fb.innerHTML = `<span class="verdict">${head}</span><span class="explain">${q.explain||''}</span>`;
+  updateScore();
+});
+function updateScore(){
+  document.getElementById('bar').style.width = (checkedCount/total*100)+'%';
+  document.getElementById('scoreval').textContent = `${checkedCount} / ${total} · ${correctCount} correct`;
+  if(checkedCount===total) showResult();
+}
+function showResult(){
+  const pct = Math.round(correctCount/total*100);
+  const r = document.getElementById('result');
+  document.getElementById('finalpct').textContent = pct+'%';
+  document.getElementById('finalmsg').textContent = `You got ${correctCount} out of ${total} questions correct.`;
+  const v = document.getElementById('finalverdict');
+  v.innerHTML = (correctCount/total >= PASS)
+    ? '<span class="pass">✓ Ready for the next chapter!</span>'
+    : '<span class="review">Review this chapter and retake before moving on (aim for 80%+).</span>';
+  r.classList.add('show');
+  r.scrollIntoView({behavior:'smooth', block:'start'});
+}
+(function(){
+  var h=document.documentElement,btn=document.getElementById('theme-btn');
+  if(sessionStorage.getItem('theme')==='light'){h.classList.add('light');btn.textContent='☾';}
+  btn.addEventListener('click',function(){
+    var toLit=!h.classList.contains('light');
+    h.classList.toggle('light',toLit);
+    btn.textContent=toLit?'☾':'☀';
+    sessionStorage.setItem('theme',toLit?'light':'dark');
+  });
+})();
+</script>
+</body>
+</html>
